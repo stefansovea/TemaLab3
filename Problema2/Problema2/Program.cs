@@ -17,7 +17,8 @@ namespace Problema2
                 mat[i] = new string[30];
             }
             int m = 0;
-            int n;
+            int n,q;
+            int k = args.Length;
             //Alcatuirea matricei de elemente
             if (args.Length == 0)
                 Console.Write("Linia de comanda nu contine argumente");
@@ -26,25 +27,23 @@ namespace Problema2
                 for (int i = 97; i <= 122; i++)
                 {
                     n = 0;
+                    q = 0;
                     foreach (string param in args)
                     {
-
+                        q++; 
                         if (param.ToLower()[0] == i)
                         {
                             mat[m][n] = param;
                             n++;
                         }
-                        else
-                        {
-                            mat[m][n] = "*";
-                        }
-
+                        if (q == k && n>0)
+                            m++;
                     }
-                    m++;
                 }
               //Afisarea matricei
                 for (int i = 0; i < m; i++)
                 {
+                    Console.Write("{0}:", mat[i][0].Substring(0, 1));
                     for (int j = 0; j < mat[i].Length; j++)
                     {
                         Console.Write("{0} ", mat[i][j]);
@@ -52,6 +51,7 @@ namespace Problema2
                     Console.Write("\n");
 
                 }
+                Console.ReadKey();
 
             }
         }
