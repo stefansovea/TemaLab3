@@ -9,7 +9,7 @@ namespace Problema2
     class Program
     {
         static void Main(string[] args)
-        {   // afisarea numarului de argumente
+        {   //afisarea numarului de argumente
             Console.WriteLine("Numarul de argumente este: {0}", args.Length);
             string[][] mat = new string[30][];
             for (int i = 0; i <= 29; i++)
@@ -36,6 +36,7 @@ namespace Problema2
                             mat[m][n] = param;
                             n++;
                         }
+                        //Se verifica daca am parcurs toate argumentele din linia de comanda
                         if (q == k && n>0)
                             m++;
                     }
@@ -49,7 +50,6 @@ namespace Problema2
                         Console.Write("{0} ", mat[i][j]);
                     }
                     Console.Write("\n");
-
                 }
                 Console.ReadKey();
 
