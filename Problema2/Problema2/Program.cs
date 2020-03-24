@@ -42,7 +42,7 @@ namespace Problema2
                 }
               //Afisarea matricei
                 for (int i = 0; i < m; i++)
-                {
+                {   
                     Console.Write("{0}:", mat[i][0].Substring(0, 1));
                     for (int j = 0; j < mat[i].Length; j++)
                     {

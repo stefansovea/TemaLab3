@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82E31573-F5EB-4402-9407-84BE4901859A}</ProjectGuid>
+    <ProjectGuid>{34313AE5-2EF8-4248-B30D-B5E19A16E31D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Problema3</RootNamespace>
-    <AssemblyName>Problema3</AssemblyName>
+    <RootNamespace>EvidentaStudenti2</RootNamespace>
+    <AssemblyName>EvidentaStudenti2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
