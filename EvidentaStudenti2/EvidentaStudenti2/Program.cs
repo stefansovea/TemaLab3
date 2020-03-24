@@ -35,16 +35,13 @@ namespace ManagementStudenti
                         Environment.Exit(1);
                         break;
                     case 's':
-                        s.CitireSirCaractere();
+                        Console.WriteLine("Introduceti notele:");
+                        string note_ = s.CitireSirCaractere();
+                        s.SetNote(note_);
                         Console.ReadKey();
                         break;
                     case 'a':
-                        Console.WriteLine("Studentul {0} are urmatoarele note:",s.GetNume());
-                        for (int i=0;i<4;i++)
-                        {   
-                            Console.WriteLine(s.ConversieLaSir(i));
-                            Console.WriteLine();
-                        }
+                        Console.WriteLine(s.ConversieLaSir());
                         int sub, peste;
                         s.NumarareNote(out sub, out peste);
                         Console.WriteLine("Are {0} note sub nota 5",sub);

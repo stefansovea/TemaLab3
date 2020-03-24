@@ -8,30 +8,20 @@
 
         // contructor implicit
         public Student()
-        {
-            int i, j;
-           
+        {         
         }
 
         // constructor cu parametri
         public Student(string _nume)
         {
-            nume = _nume;
-            int i, j;
-           
+            nume = _nume;   
         }
 
-        // metoda ce returneaza numele
-        public string GetNume()
-        {
-            return nume;
-        }
 
         //citirea de la tastatura a unui string
         public string CitireSirCaractere()
         {
             string _note = System.Console.ReadLine();
-            SetNote(_note);
             return _note;
         }
 
@@ -86,19 +76,24 @@
         }
 
         //Metoda de afisare
-        public string ConversieLaSir(int i)
+        public string ConversieLaSir()
             {
-                string sNote = "";
-                if (note != null)
+            string sNote = "";
+            if (note != null)
+            {
+                for (int i = 0; i < 4; i++)
                 {
+                    sNote = sNote + "anul " + (i + 1) + ": ";
                     for (int j = 0; j < 15; j++)
                     {
-                    sNote = sNote + " "+ note[i, j];
+                        sNote = sNote + " " + note[i,j];
                     }
+                    sNote = sNote + "\n";
                 }
-                string s = string.Format("Anul {0}:{1} ", i+1 ,sNote);
-                return s;
             }
+            string s = string.Format("Studentul {0} are notele: \n{1}", nume, sNote);
+            return s;
+        }
         }
     }
      
