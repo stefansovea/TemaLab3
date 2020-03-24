@@ -105,7 +105,7 @@
                     sNote = sNote + "\n";
                 }
             }
-            string s = string.Format("Studentul {0} are notele:.... \n{1}", nume, sNote);
+            string s = string.Format("Studentul {0} are notele: \n{1}", nume, sNote);
             return s;
         }
     }
